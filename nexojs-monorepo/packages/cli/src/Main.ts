@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import CommandLine from '@nexojs/command-line';
+import Configs from '@xfaonae/configs';
 
 /**
  * Script entry class
@@ -21,7 +22,14 @@ export default class Main {
                 CommandLine.out.log(`Hello ${flags.name}! :D`);
             },
         }).then(() => {
-            CommandLine.app.execute();
+            CommandLine.app.registerCommand('version', {
+                handle: async () => {
+                    CommandLine.out.log(await Configs.getCLIVersion());
+                    },
+                }
+            ).then(() => {
+                CommandLine.app.execute();
+            });
         });
     }
 }

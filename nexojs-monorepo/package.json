@@ -6,7 +6,8 @@
     "description": "A simple monorepo",
     "type": "module",
     "workspaces": [
-        "./packages/cli"
+        "./packages/cli",
+        "./packages/configs"
     ],
     "scripts": {
         "watch": "nexojs watch",

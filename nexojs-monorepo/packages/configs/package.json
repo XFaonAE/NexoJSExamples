@@ -1,9 +1,9 @@
 {
-    "name": "@xfaonae/cli",
+    "name": "@xfaonae/configs",
     "version": "1.0.0",
     "author": "XFaonAE",
     "license": "Apache 2.0",
-    "description": "CLI app",
+    "description": "Configs",
     "type": "module",
     "devDependencies": {
         "@typescript-eslint/eslint-plugin": "^5.10.1",
@@ -18,9 +18,6 @@
         "typescript": "^4.5.5"
     },
     "main": "./dist/es.mjs",
-    "bin": {
-        "xfaon-cli": "./dist/es.mjs"
-    },
     "exports": {
         "import": "./dist/es.mjs",
         "require": "./dist/common.cjs"
@@ -31,9 +28,5 @@
     "directories": {
         "dist": "dist"
     },
-    "types": "./dist/types/Main.d.ts",
-    "dependencies": {
-        "@nexojs/command-line": "^1.0.0-dev.12",
-        "@xfaonae/configs": "*"
-    }
+    "types": "./dist/types/Main.d.ts"
 }
